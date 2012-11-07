@@ -10,8 +10,7 @@ gem 'bootstrap-sass', '2.0.4'
 # Production uses PostgreSQL
 gem 'pg'
 
-# Test uses sqlite3
-gem 'sqlite3'
+
 
 # Webserver for Heroku
 gem 'thin'
@@ -52,5 +51,7 @@ gem 'jquery-rails'
 # and rake tasks are available in development mode:
 group :development, :test do
 	gem 'rake'
-#   gem 'webrat'
+	#gem 'webrat'
+	# Test uses sqlite3
+	#gem 'sqlite3'
 end
