@@ -1,0 +1,6 @@
+<h1><%= @user.name %></h1>
+<p> Email: <%= @user.email if @user.email %> </p>
+<p> Total Contacts: <%= @user.contacts.count %></p>
+<%=link_to 'View Contacts', contacts_path %> <br />
+
+

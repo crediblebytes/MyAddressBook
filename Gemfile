@@ -1,17 +1,36 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.9'
+#gem 'rails', '3.0.9'
 
+gem 'rails', '3.2.8'
+gem 'bootstrap-sass', '2.0.4'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
+# Production uses PostgreSQL
 gem 'pg'
 
+# Test uses sqlite3
+gem 'sqlite3'
 
 # Webserver for Heroku
 gem 'thin'
 
+# Secure Authentication
+gem 'devise'
 
+#gem 'bootstrap-sass'
+
+# Gems used only for assets and not required in production environments
+group :assets do
+  #gem 'bootstrap-sass'
+  gem 'sass-rails'
+  gem 'coffee-rails'
+  gem 'twitter-bootstrap-rails'
+  gem 'uglifier'
+end
+
+gem 'jquery-rails'
 # Use unicorn as the web server
 # gem 'unicorn'
 
@@ -31,6 +50,7 @@ gem 'thin'
 # Bundle gems for the local environment. Make sure to
 # put test-only gems in this group so their generators
 # and rake tasks are available in development mode:
-# group :development, :test do
+group :development, :test do
+	gem 'rake'
 #   gem 'webrat'
-# end
+end

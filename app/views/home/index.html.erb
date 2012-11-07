@@ -1,0 +1,16 @@
+<h1>Home</h1>
+
+<p>Total Users:  <%=@users.count %></p>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Admin</th>
+  </tr>
+<% @users.each do |user| %>
+  <tr>
+  	<td><%=link_to user.name, user %></td>
+  	<td><%=user.admin? ? 'yes' : 'no' %>
+  </tr>
+<% end %>
+</table>
